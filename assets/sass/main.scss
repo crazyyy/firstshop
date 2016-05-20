@@ -16,10 +16,29 @@ body {
   font-weight: $f-norm;
   line-height: $base-line-height;
 
+  position: relative;
+  z-index: -1;
+
   color: $base-font-color;
   background-color: $base-background-color;
 
   -webkit-font-smoothing: antialiased;
+  &:before {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    content: '';
+
+    background-image: url(../img/logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 h1,
 h2,
@@ -87,7 +106,9 @@ picture {
 }
 
 header {
-  background-color: $light-gray;
+  height: 60px;
+
+  background-color: $gray;
   .logo {
     display: block;
 
