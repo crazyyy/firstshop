@@ -85,6 +85,22 @@ picture {
   max-width: 100%;
   margin: 0;
 }
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+
+  width: 140px;
+
+  text-align: center;
+
+  border-radius: 0;
+  background-color: $dark-blue;
+  &:hover {
+    text-decoration: none;
+
+    background-color: lighten($dark-blue, 5%);
+  }
+}
 .wrapper {
   position: relative;
 
@@ -96,16 +112,20 @@ picture {
 
   @extend .clearfix;
 }
-
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
 .container {
   max-width: 950px;
+  padding: 0;
 
   @extend .clearfix;
 }
 header {
   position: relative;
 
-  height: 165px;
+  height: 210px;
 
   background-color: transparent;
   &:before {
@@ -124,8 +144,8 @@ header {
     background-color: $gray;
   }
   .logo {
-    padding: 30px 0 0;
     margin-bottom: 23px;
+    padding: 30px 0 0;
   }
 }
 nav {
@@ -166,7 +186,7 @@ nav {
     margin-right: -15px;
     margin-left: -15px;
 
-    background-color: $blue;
+    background-color: $blueo;
 
     @extend .justify-child;
     li {
@@ -188,7 +208,7 @@ nav {
     }
     a {
       height: 45px;
-      padding: 11px 28px;
+      padding: 13px 28px;
 
       text-transform: uppercase;
 
@@ -199,11 +219,140 @@ nav {
 
 
 section {
-  padding: 0 0 $footer;
+  padding: 18px 0 $footer;
 }
 article {
+  margin-bottom: 20px;
+  padding: 25px 5px;
+
+  background-color: $light-blueo;
+
   @extend .clearfix;
+  .ctitle {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 20px;
+
+    text-align: justify;
+  }
 }
+.shop-cat {
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+
+  background-color: transparent;
+  .small-title {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+    padding: 13px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: $blueo;
+  }
+  .nav-shop {
+    margin-bottom: 25px;
+    ul {
+      text-align: center;
+    }
+    li {
+      height: 45px;
+      padding-top: 11px;
+      &:before {
+        display: none;
+      }
+      &.active {
+        a {
+          background-color: $medium-blueo;
+        }
+      }
+      &:hover {
+        a {
+          background-color: $dark-blue;
+        }
+      }
+    }
+    a {
+      height: 45px;
+      padding: 13px 28px;
+
+      text-transform: uppercase;
+
+      border-bottom: 0;
+      background-color: $light-blueo;
+    }
+  }
+  .shop-cat__block {
+    padding: 0;
+
+
+  }
+  .shop-cat__item {
+    margin-bottom: 25px;
+    padding: 0 10px;
+    .shop-cat__container {
+      height: 100%;
+      min-height: 190px;
+      padding: 18px 3px;
+
+      text-align: center;
+
+      background-color: $light-blueo;
+    }
+    span,
+    .btn {
+      display: block;
+    }
+    h2,
+    .district {
+      font-size: 20px;
+      font-weight: bold;
+
+      margin-bottom: 8px;
+    }
+    .price {
+      font-size: 36px;
+
+      margin-bottom: 11px;
+    }
+    .quantity {
+      font-size: 15px;
+
+      margin-bottom: 13px;
+    }
+    .btn {
+      margin: 0 auto;
+    }
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10),
+    &:nth-child(13),
+    &:nth-child(17) {
+      padding-left: 0;
+    }
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(9),
+    &:nth-child(12),
+    &:nth-child(15),
+    &:nth-child(18) {
+      padding-right: 0;
+    }
+  }
+}
+
+
 .looper {
   @extend .clearfix;
 }
@@ -217,10 +366,20 @@ footer {
   .inner {
     height: $footer;
   }
+  .copyright {
+    font-size: 31px;
+    line-height: 1;
+
+    margin: 0;
+    padding: 40px 0 0;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 
 @import 'fonts/font_fontawesome';
-@import 'fonts/font_roboto';
+@import 'fonts/font_myriadpro';
 @import 'base64';
 @import 'import/print';

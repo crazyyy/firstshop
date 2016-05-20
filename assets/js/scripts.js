@@ -22,3 +22,9 @@ if (typeof jQuery == 'undefined') {
 }
 // Place any jQuery/helper plugins in here.
 
+var maxheight = 0;
+$(".shop-cat__container").each(function() {
+  if($(this).height() > maxheight) { maxheight = $(this).height(); }
+});
+
+$(".shop-cat__container").height(maxheight);

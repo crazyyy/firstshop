@@ -1,7 +1,7 @@
 // Font Sizes
 $base-font-size: 16px;
 $em-base: $base-font-size;
-$base-font-family: 'Roboto', sans-serif;
+$base-font-family: 'Myriad Pro', sans-serif;
 $heading-font-family: $base-font-family;
 
 // font weight
@@ -31,8 +31,11 @@ $base-z-index: 0;
 // Colors
 $orange: orange;
 $red: red;
+$light-blueo: rgba(2, 110, 155, 0.4);
 $light-blue: #4aaad2;
 $blue: #2d92bc;
+$blueo: rgba(45, 146, 188, 0.5);
+$medium-blueo: rgba(33, 84, 105, 0.56);
 $medium-blue: #215469;
 $dark-blue: #215469;
 $gray: #43484c;
