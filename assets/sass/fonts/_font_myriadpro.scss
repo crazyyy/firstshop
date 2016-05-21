@@ -9,7 +9,7 @@ $os-font-path: '../fonts' !default;
   src: url('#{$os-font-path}/myriadpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('#{$os-font-path}/myriadpro-regular-webfont.woff') format('woff'),
   url('#{$os-font-path}/myriadpro-regular-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/myriadpro-regular-webfont.svg#open_sanslight') format('svg');
+  url('#{$os-font-path}/myriadpro-regular-webfont.svg') format('svg');
 }
 @font-face {
   font-family: 'Myriad Pro';
@@ -20,5 +20,6 @@ $os-font-path: '../fonts' !default;
   src: url('#{$os-font-path}/myriadpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('#{$os-font-path}/myriadpro-bold-webfont.woff') format('woff'),
   url('#{$os-font-path}/myriadpro-bold-webfont.ttf') format('truetype'),
-  url('#{$os-font-path}/myriadpro-bold-webfont.svg#open_sansregular') format('svg');
+  url('#{$os-font-path}/myriadpro-bold-webfont.svg') format('svg');
 }
+
