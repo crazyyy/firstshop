@@ -112,6 +112,37 @@ picture {
 
   @extend .clearfix;
 }
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+textarea,
+select[multiple=multiple] {
+  border: 0;
+  border-radius: 0;
+  background-color: $dark-blue;
+}
+input[type='submit'] {
+  text-align: center;
+
+  background-color: transparent;
+}
+label {
+  font-size: 17px;
+  font-weight: normal;
+
+  text-align: center;
+}
 .row {
   margin-right: 0;
   margin-left: 0;
@@ -189,6 +220,14 @@ nav {
     background-color: $blueo;
 
     @extend .justify-child;
+    a {
+      height: 45px;
+      padding: 13px 28px;
+
+      text-transform: uppercase;
+
+      border-bottom: 0;
+    }
     li {
       height: 45px;
       padding-top: 11px;
@@ -205,14 +244,14 @@ nav {
           background-color: $dark-blue;
         }
       }
-    }
-    a {
-      height: 45px;
-      padding: 13px 28px;
-
-      text-transform: uppercase;
-
-      border-bottom: 0;
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        a {
+          padding-right: 27px;
+          padding-left: 27px;
+        }
+      }
     }
   }
 }
@@ -294,8 +333,6 @@ article {
   }
   .shop-cat__block {
     padding: 0;
-
-
   }
   .shop-cat__item {
     margin-bottom: 25px;
@@ -351,8 +388,129 @@ article {
     }
   }
 }
+.rules,
+.check-order,
+.reviews,
+.check-pay,
+.contacts,
+.login-form,
+.personal-account {
+  .ctitle {
+    font-size: 30px;
+    font-weight: normal;
 
+    margin-bottom: 30px;
 
+    text-transform: inherit ;
+  }
+}
+.check-order,
+.login-form {
+  form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    input[type='submit'] {
+      font-size: 30px;
+      font-weight: normal;
+
+      width: 100%;
+      padding: 8px 0;
+
+      text-align: center;
+
+      border-radius: 0;
+    }
+    p {
+      font-size: 17px;
+
+      margin-right: -50px;
+      margin-left: -50px;
+
+      text-align: center;
+    }
+  }
+}
+.personal-account {
+  span {
+    font-size: 18px;
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    text-align: center;
+  }
+  button {
+    font-size: 17px;
+    font-weight: normal;
+
+    display: block;
+
+    width: 300px;
+    margin: 0 auto 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.reviews {
+  button {
+    font-size: 17px;
+    font-weight: normal;
+
+    display: block;
+
+    width: 180px;
+    margin: 0 auto 20px;
+    margin-bottom: 30px;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .review-body {
+    font-size: 17px;
+
+    margin-bottom: 25px;
+    padding: 18px;
+
+    background-color: $medium-blueo;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: normal;
+
+      padding-bottom: 10px;
+
+      border-bottom: 2px solid #fff;
+      .name {
+        text-transform: uppercase;
+      }
+    }
+    p {
+      font-size: 17px;
+      font-style: italic;
+    }
+  }
+}
+.check-pay {
+  p {
+    text-align: center;
+  }
+}
+.red {
+  text-decoration: none;
+
+  color: $red;
+  &:hover {
+    text-decoration: none;
+
+    color: $red;
+    border-bottom: 1px solid $red;
+  }
+}
 .looper {
   @extend .clearfix;
 }
@@ -375,6 +533,32 @@ footer {
 
     text-align: center;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 990px) {
+  header {
+    height: auto;
+  }
+  .main-nav {
+    .main-nav__container {
+      height: auto;
+
+      text-align: center !important;
+      li {
+        margin: 0 10px 10px;
+      }
+    }
+  }
+  .shop-cat {
+    .shop-cat__item {
+      padding: 0 10px !important;
+    }
+    .nav-shop {
+      li {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
